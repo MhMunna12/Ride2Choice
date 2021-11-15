@@ -14,7 +14,7 @@ const Bus_Cost = () => {
   const [data, setData] = useState([]);
   const [options, setOptions] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:6060/services")
+    fetch("https://obscure-forest-03203.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => console.log(err));
@@ -30,7 +30,9 @@ const Bus_Cost = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     setCount([]);
-    fetch(`http://localhost:6060/search?from=${from}&&to=${to}`)
+    fetch(
+      `https://obscure-forest-03203.herokuapp.com/search?from=${from}&&to=${to}`
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.length) {
@@ -52,7 +54,7 @@ const Bus_Cost = () => {
       setTo(key);
     }
     let result = await fetch(
-      `http://localhost:6060/searchByKey?key=${key}&param2=${which}`
+      `https://obscure-forest-03203.herokuapp.com/searchByKey?key=${key}&param2=${which}`
     );
     result = await result.json();
     console.log("result", result);

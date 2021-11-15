@@ -20,7 +20,7 @@ const RouteAdd = () => {
       imageURL: imageURL,
     };
 
-    fetch("http://localhost:6060/addService", {
+    fetch("https://obscure-forest-03203.herokuapp.com/addService", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(busData),
@@ -42,7 +42,7 @@ const RouteAdd = () => {
   // };
   // const handleSubmit = (e) => {
   //   e.preventDefault();
-  //   fetch("http://localhost:6060/addService", {
+  //   fetch("https://obscure-forest-03203.herokuapp.com/addService", {
   //     method: "POST",
   //     headers: { "Content-Type": "application/json" },
   //     body: JSON.stringify(route),

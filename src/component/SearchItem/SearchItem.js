@@ -6,7 +6,7 @@ const SearchItem = () => {
   console.log(id);
   const [bus, setBus] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:6060/bus/${id}`)
+    fetch(`https://obscure-forest-03203.herokuapp.com/bus/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setBus(data);
