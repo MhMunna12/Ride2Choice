@@ -1,0 +1,18 @@
+.side-bar {
+  background-color: #5af39c;
+  min-height: 520px;
+}
+.side-bar button {
+  background-color: #5af39c;
+  border-color: none;
+  border: none;
+}
+.side-bar button:hover {
+  background-color: #8df7bb;
+  border-color: #56776c;
+  /* border: none; */
+}
+.side-bar h4 {
+  color: white;
+  margin-left: 5px;
+}

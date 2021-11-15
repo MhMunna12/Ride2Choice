@@ -1,0 +1,41 @@
+/* nav {
+  z-index: 2;
+} */
+.nav-link {
+  font-size: 15px !important;
+  font-weight: bold;
+  color: white;
+}
+.nav-link:hover {
+  color: #fdbc24 !important;
+}
+.navbar-brand {
+  color: #fdbc24 !important;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: "Oswald", sans-serif;
+}
+.navbars {
+  background-color: #089d49 !important;
+  /* height: 80px; */
+}
+/* .navbar-nav {
+  background-color: #131313 !important;
+} */
+
+.vehicles {
+  padding: 15px;
+}
+.vehicle {
+  padding: 10px 30px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+.vehicle:hover {
+  padding: 12px 35px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid #5af39c;
+  background-color: #3abd72;
+  color: #fff;
+}
