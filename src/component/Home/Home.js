@@ -6,6 +6,7 @@ import Info from "./Info/Info";
 import NavBar from "./NavBar/NavBar";
 import Review from "./Review/Review";
 import Service from "./Service/Service";
+import Video from "./Video/Video";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Header />
       <Info />
       <Service />
+      <Video />
       <Review />
       <Faq />
       <Footer />

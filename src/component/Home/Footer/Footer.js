@@ -40,7 +40,7 @@ const Footer = () => {
                 style={{ color: "white", marginRight: "5px" }}
                 icon={faEnvelope}
               />{" "}
-              info@followers.com
+              info@ride2choice.com
             </h6>
 
             <h6 style={{ marginLeft: "25px" }}> Dhaka Bangladesh</h6>

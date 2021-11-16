@@ -11,6 +11,8 @@ import Search from "./component/Search/Search";
 import SearchItem from "./component/SearchItem/SearchItem";
 import T_Home from "./component/Train/Home/T_Home";
 import Air from "./component/Air/Air";
+import SignUp from "../src/component/Auth/SignUp/SignUp";
+import SignIn from "./component/Auth/SignIn/SignIn";
 function App() {
   return (
     <div>
@@ -39,6 +41,12 @@ function App() {
           </Route>
           <Route path="/air-service">
             <Air />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/sign-in">
+            <SignIn />
           </Route>
         </Switch>
       </Router>

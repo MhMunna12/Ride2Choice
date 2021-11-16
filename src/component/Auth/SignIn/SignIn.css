@@ -1,0 +1,38 @@
+.login-color {
+  /* background-color: #f9f9fe; */
+}
+
+.login-main {
+  margin-top: 100px;
+}
+.login-main p {
+  font-size: 35px;
+}
+.login-text {
+  border-radius: 15px;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #8df7bb;
+}
+.login-btn {
+  color: white;
+  background-color: #8df7bb;
+  padding: 10px;
+  border-radius: 25px;
+}
+.google {
+  border-radius: 10px;
+  background-color: #f9f9fe;
+  border: 2px solid #8df7bb;
+}
+/* .facebook {
+  border-radius: 10px;
+  background-color: #f9f9fe;
+  border: 2px solid skyblue;
+} */
+
+.login-image img {
+  width: 600px;
+  height: 300px;
+  padding: 10px;
+}
