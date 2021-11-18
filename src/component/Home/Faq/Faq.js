@@ -20,7 +20,7 @@ const Faq = () => {
               aria-expanded="false"
               aria-controls="collapseOne"
             >
-              How many times do i have to tell you a few ways?
+              Hassle free and Quick
             </button>
           </h2>
           <div
@@ -31,11 +31,8 @@ const Faq = () => {
           >
             <div class="accordion-body">
               <p className="text-secondary">
-                Progressively generate synergistic total linkage through
-                cross-media intellectual capital. Enthusiastically parallel task
-                building e-tailers without standards compliant initiatives.
-                Progressively monetize client-centric outsourcing with excellent
-                communities.
+                With just a few clicks on the app, you can find a vehicle
+                easily, in minutes.
               </p>
             </div>
           </div>
@@ -51,7 +48,7 @@ const Faq = () => {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              What is do i have to tell you a few lorem?
+              We Got You Covered
             </button>
           </h2>
           <div
@@ -62,11 +59,8 @@ const Faq = () => {
           >
             <div class="accordion-body">
               <p className="text-secondary">
-                Progressively generate synergistic total linkage through
-                cross-media intellectual capital. Enthusiastically parallel task
-                team building e-tailers without standards compliant initiatives.
-                Progressively monetize client-centric outsourcing with excellent
-                communities
+                Our rides are safe, so you can rely on us to provide you with
+                the safest rides.
               </p>
             </div>
           </div>
@@ -81,8 +75,7 @@ const Faq = () => {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              I have a technical problem or support issue I need resolved, who
-              do I email?
+              Beat Traffic, Save Time
             </button>
           </h2>
           <div
@@ -93,11 +86,8 @@ const Faq = () => {
           >
             <div class="accordion-body">
               <p className="text-secondary">
-                Progressively generate synergistic total linkage through
-                cross-media intellectual capital. Enthusiastically parallel task
-                team building e-tailers without standards compliant initiatives.
-                Progressively monetize client-centric outsourcing with excellent
-                communities.
+                Nothing beats traffic like choosing the right ride and you know
+                it! Save time, save money and reach your destination on time.
               </p>
             </div>
           </div>
@@ -112,7 +102,7 @@ const Faq = () => {
               aria-expanded="false"
               aria-controls="collapseFour"
             >
-              What other services are you compatible with?
+              Travel at Your Convenience
             </button>
           </h2>
           <div
@@ -123,11 +113,9 @@ const Faq = () => {
           >
             <div class="accordion-body">
               <p className="text-secondary">
-                Progressively generate synergistic total linkage through
-                cross-media intellectual capital. Enthusiastically parallel task
-                team building e-tailers without standards compliant initiatives.
-                Progressively monetize client-centric outsourcing with excellent
-                communities.
+                Budget tight? use our website to select vehicles! Want to travel
+                in AC or Non Ac vehicle? know about your bus stop. Use
+                Ride2Choice Website!
               </p>
             </div>
           </div>
@@ -142,7 +130,7 @@ const Faq = () => {
               aria-expanded="false"
               aria-controls="collapseFive"
             >
-              Are you hiring?
+              Comfort With Affordability
             </button>
           </h2>
           <div
@@ -153,11 +141,9 @@ const Faq = () => {
           >
             <div class="accordion-body">
               <p className="text-secondary">
-                Progressively generate synergistic total linkage through
-                cross-media intellectual capital. Enthusiastically parallel task
-                team building e-tailers without standards compliant initiatives.
-                Progressively monetize client-centric outsourcing with excellent
-                communities.
+                With the Ride2Choice Know your vehicle rental, even if you
+                choose to travel in any vehicle you’ll be traveling with ease
+                and comfort that is affordable.
               </p>
             </div>
           </div>

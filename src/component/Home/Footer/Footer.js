@@ -19,9 +19,15 @@ const Footer = () => {
           <div className="col-md-4 about-us" style={{ marginTop: "30px" }}>
             <h3 className="mb-4 mt-4">About us</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-              quas reprehenderit harum at minus voluptates deleniti ipsa dolores
-              maiores sint.
+              We started our journey in 2021 with one goal in mind- to make
+              lives easier. As a technology first company, we develop
+              tech-driven solutions for the everyday challenges of Bangladeshi
+              people. The Ride2Choice website serves as a single portal
+              connecting people to vehicles providing a wide range of services
+              like rides, bus rides, launch rides, bike rides, plane rides, etc.
+              Our on-demand service provides all the customer care must have
+              digital control vehicles and we serve our people online base
+              digital vehicles.
             </p>
             {/* <img src={paypal} alt="" /> */}
           </div>

@@ -28,9 +28,13 @@ const Search = ({ item }) => {
           <span style={{ color: "tomato" }}>Cost</span> :{" "}
           <span style={{ color: "red", fontWeight: "bold" }}>{cost}</span>
         </h4>
-        <h4 className="ms-5">
-          <span style={{ color: "tomato" }}>Bus Name</span> : {km}
-        </h4>
+        {km ? (
+          <h4 className="ms-5">
+            <span style={{ color: "tomato" }}>Kilo Meeter</span> : {km}
+          </h4>
+        ) : (
+          <span></span>
+        )}
         <div className="ms-auto">
           <Button
             className="btn btn-primary view-btn"

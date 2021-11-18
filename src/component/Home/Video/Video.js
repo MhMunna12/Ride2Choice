@@ -6,7 +6,7 @@ const Video = () => {
       <div>
         <h1 className="text-center mt-5">
           How to Service Ride2Choice <br /> Followers?{" "}
-          <span style={{ color: "#3abd72" }}>[Vedio Guide]</span>{" "}
+          <span style={{ color: "#3abd72" }}>[Video Guide]</span>{" "}
         </h1>
       </div>
       <div className="d-flex justify-content-center align-content-center mt-5 mb-5">

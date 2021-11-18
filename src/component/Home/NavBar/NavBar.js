@@ -73,13 +73,13 @@ const NavBar = () => {
                 <Link to="/home" className="nav-link ms-4 text-white">
                   Home
                 </Link>
-                <Link to="/service" className="nav-link ms-4 text-white">
+                <Link to="/#" className="nav-link ms-4 text-white">
                   Service
                 </Link>
-                <Link to="/about" className="nav-link ms-4 text-white">
+                <Link to="/#" className="nav-link ms-4 text-white">
                   About
                 </Link>
-                <Link to="/contact" className="nav-link ms-4 text-white">
+                <Link to="/#" className="nav-link ms-4 text-white">
                   Contact
                 </Link>
                 <Link to="/signup" className="nav-link ms-4 text-white">
