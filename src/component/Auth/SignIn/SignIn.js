@@ -3,7 +3,24 @@ import "./SignIn.css";
 import signin from "../../../images/signIn.png";
 import { Link } from "react-router-dom";
 import Footer from "../../Home/Footer/Footer";
+import { useState } from "react";
+import useFirebase from "../Hooks/useFirebase";
+import { useContext } from "react";
+import { UserContext } from "../../../App";
 const SignIn = () => {
+  const { handleSignIn } = useFirebase();
+  const [user, setUser] = useState({});
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const handleChange = (e) => {
+    const newUser = { ...loggedInUser };
+    newUser[e.target.name] = e.target.value;
+    setLoggedInUser(newUser);
+    // console.log(loggedInUser);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleSignIn(loggedInUser.email, loggedInUser.password);
+  };
   return (
     <div className="login-color">
       <div className="container">
@@ -15,13 +32,13 @@ const SignIn = () => {
         </div>
         <div className="row">
           <div className="col-md-5">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
                 type="email"
                 className="form-control login-text"
                 placeholder="Email"
                 name="email"
-                // onBlur={handleChange}
+                onBlur={handleChange}
                 required
               />
               <br />
@@ -29,7 +46,7 @@ const SignIn = () => {
                 type="password"
                 className="form-control login-text"
                 placeholder="Password"
-                // onBlur={handleChange}
+                onBlur={handleChange}
                 name="password"
                 required
               />

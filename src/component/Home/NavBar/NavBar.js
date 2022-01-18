@@ -1,5 +1,5 @@
 import Button from "@restart/ui/esm/Button";
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,12 +7,17 @@ import {
   faBus,
   faCoffee,
   faRocket,
+  faSignOutAlt,
   faSubway,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../../images/Ride2Choice.jpg";
 
 import "./NavBar.css";
+import { UserContext } from "../../../App";
+import useFirebase from "../../Auth/Hooks/useFirebase";
 const NavBar = () => {
+  // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { loggedInUser, handleSignOut } = useFirebase();
   return (
     <div>
       {/* <div className="navbars">
@@ -82,9 +87,18 @@ const NavBar = () => {
                 <Link to="/#" className="nav-link ms-4 text-white">
                   Contact
                 </Link>
-                <Link to="/signup" className="nav-link ms-4 text-white">
-                  Login
-                </Link>
+                {!loggedInUser.email ? (
+                  <Link to="/signup" className="nav-link ms-4 text-white">
+                    Login
+                  </Link>
+                ) : (
+                  <p
+                    onClick={handleSignOut}
+                    className="ms-4 text-white mt-2 signout"
+                  >
+                    LogOut <FontAwesomeIcon icon={faSignOutAlt} />
+                  </p>
+                )}
               </ul>
             </div>
           </div>

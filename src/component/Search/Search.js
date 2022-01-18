@@ -8,7 +8,7 @@ const Search = ({ item }) => {
     history.push(`/search/${id}`);
   };
 
-  console.log(item);
+  console.log("item", item);
   const { route, destination, busname, cost, km } = item;
   return (
     <div className="container ">

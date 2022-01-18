@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import React from "react";
+import React, { createContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
@@ -13,10 +12,20 @@ import T_Home from "./component/Train/Home/T_Home";
 import Air from "./component/Air/Air";
 import SignUp from "../src/component/Auth/SignUp/SignUp";
 import SignIn from "./component/Auth/SignIn/SignIn";
+import { useState } from "react";
+import PrivateRoute from "./component/Auth/PrivateRoute/PrivateRoute";
+
+export const UserContext = createContext();
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
   return (
-    <div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
+        {/* <p>Email: {loggedInUser.email}</p> */}
         <Switch>
           <Route exact path="/">
             <Home />
@@ -24,15 +33,15 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/dashborad">
+          <Route path="/dashboard">
             <Dashbroad />
           </Route>
           <Route path="/add-route">
             <AddRoute />
           </Route>
-          <Route path="/bus-service">
+          <PrivateRoute path="/bus-service">
             <Bus_Cost />
-          </Route>
+          </PrivateRoute>
           <Route path="/search/:id">
             <SearchItem />
           </Route>
@@ -50,7 +59,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </UserContext.Provider>
   );
 }
 

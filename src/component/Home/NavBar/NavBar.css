@@ -42,3 +42,7 @@
 .logo img {
   width: 50px;
 }
+.signout {
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -4,7 +4,29 @@ import { Link } from "react-router-dom";
 import "./SignUp.css";
 import signup from "../../../images/singUp.png";
 import Footer from "../../Home/Footer/Footer";
+import { useState } from "react";
+import useFirebase from "../Hooks/useFirebase";
+import { useContext } from "react";
+import { UserContext } from "../../../App";
 const SignUp = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  // const [register, setRegister] = useState({});
+  const { handleSignUp, handleGoogleIn } = useFirebase();
+
+  const handleChange = (e) => {
+    const newRegister = { ...loggedInUser };
+    newRegister[e.target.name] = e.target.value;
+    setLoggedInUser(newRegister);
+    // console.log(newRegister);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleSignUp(loggedInUser.email, loggedInUser.password);
+  };
+  const googleSignIn = (e) => {
+    e.preventDefault();
+    handleGoogleIn();
+  };
   return (
     <div className="login-color">
       <div className="container">
@@ -16,10 +38,10 @@ const SignUp = () => {
         </div>
         <div className="row">
           <div className="col-md-5">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
                 type="text"
-                // onBlur={handleChange}
+                onBlur={handleChange}
                 className="form-control login-text"
                 placeholder="Name"
                 name="name"
@@ -28,7 +50,7 @@ const SignUp = () => {
               <br />
               <input
                 type="email"
-                // onBlur={handleChange}
+                onBlur={handleChange}
                 className="form-control login-text"
                 placeholder="Email"
                 name="email"
@@ -37,13 +59,13 @@ const SignUp = () => {
               <br />
               <input
                 type="password"
-                // onBlur={handleChange}
+                onBlur={handleChange}
                 className="form-control login-text"
                 placeholder="Password"
                 name="password"
                 id=""
               />
-              <br />
+              {/* <br />
               <input
                 type="password"
                 // onBlur={handleChange}
@@ -51,7 +73,7 @@ const SignUp = () => {
                 placeholder="Re-Password"
                 name="repassword"
                 id=""
-              />
+              /> */}
               {/* {error && <p style={{ color: "red" }}>Password didn't match</p>} */}
               <br />
               <div className="d-grid">
@@ -68,7 +90,9 @@ const SignUp = () => {
             </form>
 
             <div className="d-grid">
-              <Button className=" btn google">Signin with Google</Button>
+              <Button className=" btn google" onClick={googleSignIn}>
+                Signin with Google
+              </Button>
             </div>
           </div>
           <div className="col-md-7 register-image">
