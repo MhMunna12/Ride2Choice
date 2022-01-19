@@ -1,5 +1,7 @@
+import { Button } from "bootstrap";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import "./SearchItem.css";
 const SearchItem = () => {
   const { id } = useParams();
@@ -11,7 +13,8 @@ const SearchItem = () => {
       .then((data) => {
         setBus(data);
         // console.log(data);
-      });
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   console.log("bbb", bus);
@@ -48,6 +51,9 @@ const SearchItem = () => {
             <h4>Bus Class : {busclass}</h4>
           </div>
         </div>
+        {/* <Link to={"https://www.google.com/maps"} btn btn-primary>
+          Visit Google Map
+        </Link> */}
       </div>
     </div>
   );

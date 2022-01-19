@@ -14,6 +14,7 @@ import SignUp from "../src/component/Auth/SignUp/SignUp";
 import SignIn from "./component/Auth/SignIn/SignIn";
 import { useState } from "react";
 import PrivateRoute from "./component/Auth/PrivateRoute/PrivateRoute";
+import Edit from "./Edit/Edit";
 
 export const UserContext = createContext();
 function App() {
@@ -33,9 +34,9 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashbroad />
-          </Route>
+          </PrivateRoute>
           <Route path="/add-route">
             <AddRoute />
           </Route>
@@ -56,6 +57,9 @@ function App() {
           </Route>
           <Route path="/sign-in">
             <SignIn />
+          </Route>
+          <Route path="/edit/:editId">
+            <Edit />
           </Route>
         </Switch>
       </Router>
